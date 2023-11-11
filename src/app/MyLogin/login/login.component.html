@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <div class="remember">
+        <label for="remember-me">Remember me</label>
+        <input type="checkbox" id="remember" name="remember" />
+      </div>
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button (click)="login()">Login</button>
+    </form>
+    <div class="signup-link">
+      Don't have an account? <a href="#">Sign up</a>
+    </div>
+  </div>
+</div>

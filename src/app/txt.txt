@@ -1,0 +1,12 @@
+Lazyloading
+Route guards
+Module
+Component lifecycle
+Api calls- get query parameters post body calls json, put delete 
+Adding headers in api calls 
+Api interceptor
+RxJs- observable pipe filter map
+IO operator child<-parent
+Angular materials
+
+scss

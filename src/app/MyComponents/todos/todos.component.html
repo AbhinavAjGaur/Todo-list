@@ -1,3 +1,30 @@
-<ul *ngFor="let todo of todos">
-    <li>{{todo.sno}} - {{todo.title}} - {{todo.desc}}</li>
-</ul>
+<div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Todos List</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+  <app-add-todo (todoAdd)="addTodo($event)" ></app-add-todo>
+  <h4>Your Todo List</h4>
+  <div *ngIf="this.todos.length===0; else elseBlock">No Todos to display</div>
+  <ng-template #elseBlock>
+    <div *ngFor="let todo of todos ; index as i">
+        <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
+    </div>
+  </ng-template>
+</div>
+
+
+
+
